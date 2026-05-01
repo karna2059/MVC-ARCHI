@@ -64,6 +64,19 @@ namespace MVC_ARCHI.Controllers
 
             return View(objpro);
         }
+        public ActionResult Redirect()
+        {
+            ViewBag.Message = "this is viewbag message";
+            ViewData["Message"] = "this is viewdata message";
+            TempData["data"] = "this is tempdata message";
+            Session["data"] = "this is session message";
 
+            return RedirectToAction("success");
+
+        }
+        public ActionResult success()
+        {
+            return View();
+        }
     }
 }
