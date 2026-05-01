@@ -1,0 +1,35 @@
+﻿@model MVC_ARCHI.Models.productdetails
+@{
+    ViewBag.Title = "productdetails";
+}
+
+<h2>productdetails</h2>
+<h3>@ViewBag.Message</h3>
+<h3>@ViewData["data"]</h3>
+
+<p>Product ID: @Model.id</p>
+<p>Product Name: @Model.name</p>
+<p>Product Description: @Model.description</p>
+
+<table>
+    <tr>
+        <th>productid</th>
+        <td>@ViewData["productid"]</td>
+    </tr>
+    <tr>
+        <th>name</th>
+        <td>@ViewData["name"]</td>
+    </tr>
+    <tr>
+        <th>quantity</th>
+        <td>@ViewData["quantity"]</td>
+    </tr>
+    <tr>
+        <th>price</th>
+        <td>@ViewData["price"]</td>
+    </tr>
+    <tr>
+        <th>status</th>
+        <td>@ViewData["status"]</td>
+    </tr>
+</table>
