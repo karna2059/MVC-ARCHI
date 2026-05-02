@@ -1,6 +1,7 @@
-﻿@Model MvcArch.Models.liststudent
+﻿
+@model  List<MVC_ARCHI.Models.student>
 @{
-    ViewBag.Title = "liststudent";
+    ViewBag.Title = "Student";
 }
 
 <h2>liststudent</h2>
@@ -19,8 +20,11 @@
             <td>@student.name</td>
             <td>@student.age</td>
             <td>@student.email</td>
-            <td>@student.EnrollmentDate</td>
+            <td>@student.EnrollmentDate.ToShortDateString()</td>
         </tr>
+
+
+
     }
 
 </table>
