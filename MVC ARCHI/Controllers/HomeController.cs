@@ -106,7 +106,33 @@ namespace MVC_ARCHI.Controllers
             };
             return View(objstu);
 
-    }
-    }
+        }
+        public ActionResult listorder()
+        {
+            List<order> objord = new List<order>()
+            {
+                new order() { orderid=1, name="karna", address="delhi" },
+                new order() { orderid=2, name="sita", address="mumbai" },
+                new order() { orderid=3, name="ram", address="chennai" },
+                new order() { orderid=4, name="lakshman", address="kolkata" },
+                new order() { orderid=5, name="hanuman", address="bangalore" }
+            };
+            return View(objord);
+        }
 
+        public ActionResult employeedetails()
+        {
+            List<employeedetails> objemp = new List<employeedetails>()
+            {
+                new employeedetails() { empoyeeid=1, name="karna", phone=1234567890, email="karna@gmail.com", salary=50000 },
+                new employeedetails() { empoyeeid=2, name="sita", phone=9876543210, email="sita@gmail.com", salary=60000 },
+                new employeedetails() { empoyeeid=3, name="ram", phone=4567891230, email="ram@gmail.com", salary=55000 },
+                new employeedetails() { empoyeeid=4, name="lakshman", phone=7891234560, email="lakshman@gmail.com", salary=70000 },
+                new employeedetails() { empoyeeid=5, name="hanuman", phone=3216549870, email="hanuman@gmail.com", salary=65000 }
+            };
+            return View(objemp);
+        }
+
+       
+    }
 }

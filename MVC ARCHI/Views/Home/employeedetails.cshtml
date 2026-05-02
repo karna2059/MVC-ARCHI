@@ -1,0 +1,29 @@
+﻿@model List<MVC_ARCHI.Models.employeedetails>
+@{
+    ViewBag.Title = "employeedetails";
+}
+
+<h2>employeedetails</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var details in Model)
+        {
+            <tr>
+                <td>@details.empoyeeid</td>
+                <td>@details.name</td>
+                <td>@details.phone</td>
+                <td>@details.email</td>
+                <td>@details.salary</td>
+            </tr>
+        }
+    </tbody>
+</table>
