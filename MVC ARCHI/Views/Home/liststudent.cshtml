@@ -1,0 +1,27 @@
+﻿@Model MvcArch.Models.liststudent
+@{
+    ViewBag.Title = "liststudent";
+}
+
+<h2>liststudent</h2>
+<table class="table">
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Enrollment Date</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.studentid</td>
+            <td>@student.name</td>
+            <td>@student.age</td>
+            <td>@student.email</td>
+            <td>@student.EnrollmentDate</td>
+        </tr>
+    }
+
+</table>
+

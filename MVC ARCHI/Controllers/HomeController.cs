@@ -42,9 +42,9 @@ namespace MVC_ARCHI.Controllers
         {
             productdetails objpro = new productdetails()
             {
-               id=1,
-               name="dell",
-               description= "this is product details"
+                id = 1,
+                name = "dell",
+                description = "this is product details"
             };
             ViewData["data"] = "welcome";
 
@@ -78,5 +78,35 @@ namespace MVC_ARCHI.Controllers
         {
             return View();
         }
+
+        public ActionResult Details()
+        {
+
+            student objs = new student()
+            {
+                studentid = 1,
+                name = "karna",
+                age = 22,
+                email = "karna@gmail.com",
+                EnrollmentDate = new DateTime(2020, 01, 01)
+            };
+            return View(objs);
+
+        }
+        public ActionResult liststudent()
+        {
+            List<student> objstu = new List<student>()
+            {
+                new student() { studentid=101, name="karna", age=22, email="karna@gmail.com", EnrollmentDate = new DateTime(2020, 01, 01) },
+                new student() { studentid=102, name="sita", age=21, email="sita@gmail.com", EnrollmentDate = new DateTime(2021, 02, 01) },
+                new student() { studentid=103, name="ram", age=23, email="ram@gmail.com", EnrollmentDate = new DateTime(2022, 03, 01) },
+                new student() { studentid=104, name="lakshman", age=24, email="lakshman@gmail.com", EnrollmentDate = new DateTime(2023, 04, 01) },
+                new student() { studentid=105, name="hanuman", age=25, email="hanuman@gmail.com", EnrollmentDate = new DateTime(2024, 05, 01) }
+
+            };
+            return View(objstu);
+
     }
+    }
+
 }
